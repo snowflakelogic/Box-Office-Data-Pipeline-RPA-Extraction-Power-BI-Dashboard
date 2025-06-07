@@ -169,3 +169,4 @@ To contribute to this project:
 This project is for educational and research purposes. Ensure compliance with Box Office Mojo's terms of service and data usage policies.
 
 ---
+Maintained by: snowflakelogic
