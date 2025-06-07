@@ -7,7 +7,7 @@ A UiPath RPA workflow for automated data extraction from Box Office Mojo's weeke
 This RPA solution automates the process of scraping box office data from Box Office Mojo's website, specifically targeting weekend box office performance data across different countries. The workflow extracts tabular data and exports it to CSV format for further analysis.
 ## 🖼️ Workflow Screenshot
 
-![UiPath Workflow](images/RPA_UIPATH_DATA_EXTRACTION.PNG)
+![UiPath Workflow](RPA_UIPATH_DATA_EXTRACTION.PNG)
 
 *Box Office Mojo RPA Data Extraction Workflow*
 
