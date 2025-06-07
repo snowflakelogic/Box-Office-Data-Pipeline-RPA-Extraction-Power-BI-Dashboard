@@ -1,4 +1,4 @@
-# Box Office Mojo RPA Data Extraction
+# Box Office Mojo RPA Data Extraction And Power BI Dashboard
 
 A UiPath RPA workflow for automated data extraction from Box Office Mojo's weekend box office data by country.
 
