@@ -208,36 +208,6 @@ The processed dataset includes:
 - Use batch processing for large datasets
 - Add progress tracking for long-running operations
 
-## 📈 Analytics Integration
-
-### Power BI Dashboard Features
-The processed data supports:
-- **Revenue Trends**: Time-series analysis of box office performance
-- **Genre Analysis**: Performance breakdown by movie genres
-- **Budget vs. Revenue**: ROI analysis using OMDB budget data
-- **Geographic Performance**: Country-wise box office comparison
-- **Runtime Impact**: Analysis of movie duration vs. performance
-
-### Dashboard Components
-1. **Executive Summary**: Key metrics and KPIs
-2. **Trend Analysis**: Historical performance visualization
-3. **Comparative Analysis**: Movie and genre comparisons
-4. **Geographic Insights**: Regional performance mapping
-
-## 🔄 Maintenance & Updates
-
-### Regular Maintenance
-- **API Key Management**: Monitor OMDB API usage limits
-- **Selector Updates**: Maintain web scraping reliability
-- **Data Quality Monitoring**: Regular validation checks
-- **Performance Optimization**: Monitor processing times
-
-### Data Quality Assurance
-- Automated data validation rules
-- Missing value monitoring
-- Outlier detection and handling
-- Cross-reference validation with external sources
-
 ## 📝 Future Enhancements
 
 ### Planned Improvements
