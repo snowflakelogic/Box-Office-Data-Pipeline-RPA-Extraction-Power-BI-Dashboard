@@ -1,4 +1,4 @@
-# Box Office Mojo RPA Data Extraction And Power BI Dashboard
+# Automated Box Office Analytics: Complete ETL Pipeline with RPA and Power BI
 
 A comprehensive UiPath RPA workflow for automated data extraction from Box Office Mojo's weekend box office data by country, enhanced with OMDB API integration for enriched movie metadata and advanced data preprocessing.
 
