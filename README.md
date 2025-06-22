@@ -3,13 +3,13 @@
 A comprehensive multi-platform analytics solution that combines theatrical box office performance, streaming platform metrics, and public search interest to provide unprecedented insights into movie performance across the modern entertainment ecosystem.
 ## 📷 Sample Dashboard Visuals
 
-### 🎯 Cross-Platform Performance View
+### 🎯 Main Dashboard
 ![Cross-Platform Performance](Screenshot%202025-06-22%20200814.png)
 
-### 🎭 Genre Insights Comparison
+### 🎭 OTT Platforms (Netflix, Amazon Prime Video)
 ![Genre Comparison](Screenshot%202025-06-22%20200820.png)
 
-### 🌍 Google Trends Geo-Interest Map
+### 🌍 Box Office Collection (Box-Office Mojo + OMDB API + Google Trends)
 ![Geo Interest Map](Screenshot%202025-06-22%20200832.png)
 
 
