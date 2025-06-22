@@ -1,107 +1,205 @@
-# Automated Box Office Analytics: Complete ETL Pipeline with RPA and Power BI
+# 🎬 Integrated Streaming & Box Office Analytics Dashboard
 
-A comprehensive UiPath RPA workflow for automated data extraction from Box Office Mojo's weekend box office data by country, enhanced with OMDB API integration for enriched movie metadata and advanced data preprocessing.
+A comprehensive multi-platform analytics solution that combines theatrical box office performance, streaming platform metrics, and public search interest to provide unprecedented insights into movie performance across the modern entertainment ecosystem.
 
-## 📋 Project Overview
+## 📊 Project Overview
 
-This RPA solution automates the complete data pipeline for box office analytics:
-1. **Data Extraction**: Scrapes box office data from Box Office Mojo's website
-2. **Data Enrichment**: Integrates with OMDB API to fetch additional movie metadata
-3. **Data Processing**: Comprehensive preprocessing and cleaning for analysis-ready datasets
-4. **Export & Visualization**: Outputs clean data for Power BI dashboard integration
+This advanced analytics dashboard integrates data from multiple sources to deliver deep insights into:
+- **Cross-Platform Performance**: How movies perform in theaters vs streaming platforms
+- **Genre Preference Analysis**: Rating patterns and categorization across Netflix and Amazon Prime
+- **Public Interest Correlation**: Search trends and their relationship to movie performance
+- **Unified Analytics View**: Complete movie lifecycle analysis from theater to streaming
 
-## 🖼️ Workflow Screenshot
+## 🎯 Key Features
 
+### 🎭 Multi-Platform Data Integration
+- **Theatrical Performance**: Box office data with custom temporal modeling
+- **Streaming Platforms**: Netflix and Amazon Prime content analysis with IMDB ratings
+- **Search Trends**: Google Trends integration for 20+ strategically selected movies
+- **Geographic Analysis**: Regional interest patterns and global appeal metrics
+
+### 🔄 Advanced Data Processing
+- **Automated RPA Pipeline**: UiPath workflow for Box Office Mojo data extraction
+- **OMDB API Integration**: Enhanced movie metadata including runtime, genre, and budget
+- **Comprehensive Data Cleaning**: Python/Pandas preprocessing for streaming datasets
+- **Genre Explosion**: Granular analysis with expanded genre categorization
+
+### 📈 Interactive Analytics
+- **Dynamic Filtering**: Movie-based slicers that filter across all connected datasets
+- **Temporal Analysis**: Time-series search trends (May 16 - June 16 analysis period)
+- **Cross-Platform Correlation**: Relationship analysis between box office, streaming ratings, and search interest
+- **Geographic Visualization**: Regional preference mapping and international appeal insights
+
+## 🛠️ Technical Architecture
+
+### Data Sources
+- **Box Office Mojo**: Automated RPA extraction using UiPath
+- **Netflix Dataset**: Comprehensive streaming catalog with ratings
+- **Amazon Prime Dataset**: Complete movie and TV show metadata
+- **Google Trends**: Geo-interest and time-series search data
+- **OMDB API**: Enhanced movie metadata integration
+
+### Technology Stack
+- **RPA Automation**: UiPath Studio for web scraping
+- **Data Processing**: Python (Pandas, NumPy) for cleaning and transformation
+- **Visualization**: Power BI with custom DAX measures
+- **API Integration**: OMDB API for movie metadata enrichment
+
+### Data Architecture
+```
+📦 Data Relationships
+├── Theater Data ↔ Month Table (1:Many) - Chronological analysis
+├── Movie Table ↔ Geo-Interest Dataset (1:Many) - Regional patterns
+├── Movie Table ↔ Time Series Dataset (1:Many) - Temporal trends
+└── Streaming Data ↔ Genre Explosion (1:Many) - Granular categorization
+```
+
+## 🔧 RPA Automation Workflow
+
+### UiPath Box Office Mojo Extraction
 ![UiPath Workflow](RPA_UIPATH_DATA_EXTRACTION.PNG)
 
-*Box Office Mojo RPA Data Extraction Workflow*
+**Automated Process:**
+1. **Data Extraction**: Scrapes weekend box office data by country
+2. **OMDB Integration**: Enriches data with runtime, genre, IMDb ID, and budget
+3. **Data Preprocessing**: Comprehensive cleaning and standardization
+4. **Export**: Analysis-ready CSV output for Power BI integration
 
-## 🎯 Features
+### Key RPA Features
+- **Multi-Country Scraping**: Automated extraction across different regions
+- **Dynamic Navigation**: Handles website structure changes
+- **Data Validation**: Quality checks and preprocessing
+- **API Integration**: Seamless OMDB metadata enrichment
 
-### Core RPA Features
-- **Automated Web Navigation**: Opens and navigates to Box Office Mojo weekend data pages
-- **Dynamic Data Extraction**: Extracts table data from multiple country-specific pages
-- **Country-Specific Scraping**: Handles data extraction for multiple countries
+## 📊 Data Processing Pipeline
 
-### Enhanced Data Processing
-- **OMDB API Integration**: Enriches data with runtime, genre, IMDb ID, and budget information
-- **Date Standardization**: Converts dates to YYYY-MM-DD format for compatibility
-- **Data Cleaning**: Handles missing values, percentage conversions, and currency formatting
-- **Data Validation**: Quality checks and preprocessing for analysis readiness
+### Streaming Data Cleaning (Netflix & Amazon Prime)
+```python
+# Data Quality Assessment
+- Netflix: 731 missing titles, 1820 missing ratings resolved
+- Amazon Prime: 1,777 missing titles, 9,205 missing ratings cleaned
 
-### Output & Analytics
-- **CSV Export**: Automatically appends processed data to CSV files
-- **Power BI Ready**: Structured data optimized for dashboard creation
-- **Multi-format Support**: Flexible export options for various analytics tools
+# Processing Steps
+1. Remove entries without titles (primary identifiers)
+2. Eliminate records without IMDB ratings
+3. Drop entries lacking genre information
+4. Genre explosion: Split comma-separated genres into individual rows
+5. Data validation: Ensure complete data integrity
+```
 
-## 🛠️ Technical Requirements
+### Enhanced Movie Selection Strategy
+- **Geographic Scope**: Selected movies released in 4+ countries
+- **Performance Range**: From minimum to maximum international coverage
+- **Trend Analysis**: Manual collection of geo-interest and time-series data
 
-### Software Dependencies
-- **UiPath Studio** (Latest version recommended)
-- **UiPath Robot** for execution
-- **Modern web browser** (Chrome/Edge recommended)
-- **Python** (for OMDB API integration and data preprocessing)
+## 📈 Key Insights & Analytics
 
-### UiPath Packages Required
+### Cross-Platform Performance Metrics
+- **Rating Correlation**: IMDB ratings distribution across platforms
+- **Genre Performance**: Top-performing genres by platform
+- **Content Volume**: Comparative catalog analysis
+
+### Geographic & Temporal Intelligence
+- **Regional Preferences**: Country-specific movie interest patterns
+- **Search Evolution**: Temporal trend analysis and spike correlation
+- **Release Impact**: Box office vs streaming performance relationships
+
+### Business Intelligence Applications
+- **Content Strategy**: Genre performance insights for creators
+- **Acquisition Decisions**: Data-driven content licensing
+- **Marketing Optimization**: Geographic targeting and timing strategies
+
+## 🚀 Setup & Installation
+
+### Prerequisites
+```bash
+# Software Requirements
+- UiPath Studio (Latest version)
+- Python 3.8+
+- Power BI Desktop
+- OMDB API Key
+```
+
+### Python Dependencies
+```bash
+pip install pandas numpy requests tqdm
+```
+
+### UiPath Packages
 - `UiPath.WebAPI.Activities`
 - `UiPath.Excel.Activities`
 - `UiPath.System.Activities`
 - `UiPath.UIAutomation.Activities`
 
-### Python Dependencies
-```python
-pip install pandas numpy requests tqdm
-```
-
-### API Requirements
-- **OMDB API Key**: Register at [OMDB API](http://www.omdbapi.com/) for movie metadata access
-
 ## 📁 Project Structure
 
 ```
-BoxOfficeMojo_RPA/
-├── Main.xaml                 # Main UiPath workflow file
-├── Data/
-│   ├── MOJO_ALL.csv         # Raw extracted data
-│   ├── processed_data.csv   # Cleaned and enriched data
-├── Scripts/
-│   ├── data_preprocessing.py # Data cleaning and OMDB integration
-│   ├── omdb_api.py          # OMDB API helper functions
-├── Screenshots/             # Workflow screenshots
-├── Config/
-│   ├── config.json          # API keys and configuration
-└── README.md               # This file
+StreamingAnalytics_Dashboard/
+├── 📊 Data/
+│   ├── CLEANED_NETFLIX.csv
+│   ├── CLEANED_AMAZON.csv
+│   ├── EXPLODED_NETFLIX.csv
+│   ├── EXPLODED_AMAZON.csv
+│   └── GoogleTrends_Data/
+├── 🤖 RPA_Automation/
+│   ├── Main.xaml (UiPath Workflow)
+│   ├── data_preprocessing.py
+│   └── omdb_integration.py
+├── 📈 PowerBI_Dashboard/
+│   ├── StreamingAnalytics.pbix
+│   └── DAX_Measures/
+├── 🔧 Data_Processing/
+│   └── AMAZON_NETFLIX_CLEANING_DATASET.ipynb
+└── 📋 Documentation/
 ```
 
-## 🔧 Complete Workflow Process
+## 🎯 Business Value
 
-### Phase 1: RPA Data Extraction
-1. **Start** - Initialize the automation process
-2. **Use Browser** - Opens browser and navigates to Box Office Mojo URL
-3. **Extract Table** - Scrapes table data and stores in `ExtractedDataTable` variable
-4. **Append to CSV** - Exports the raw data to CSV file
+### For Content Creators
+- **Genre Strategy**: Platform-specific performance insights
+- **Release Optimization**: Data-driven timing and distribution decisions
+- **Audience Targeting**: Geographic and demographic intelligence
 
-### Phase 2: Data Preprocessing
-1. **Date Formatting** - Standardize dates to YYYY-MM-DD format
-2. **Basic Cleaning** - Remove unnecessary characters and format consistency
-3. **Data Validation** - Check for data integrity and completeness
+### For Streaming Platforms
+- **Content Acquisition**: Evidence-based licensing strategies
+- **Competitive Analysis**: Cross-platform performance benchmarking
+- **User Engagement**: Predictive analytics for viewer behavior
 
-### Phase 3: OMDB API Integration
-1. **API Setup** - Configure OMDB API credentials
-2. **Movie Metadata Extraction** - Fetch additional data for each movie:
-   ```python
-   df[['OMDB_Runtime', 'OMDB_Genre', 'OMDB_imdbID', 'OMDB_Budget']] = df['#1 Release'].progress_apply(fetch_omdb_data)
-   ```
-3. **Data Merging** - Integrate OMDB data with Box Office Mojo dataset
+### For Market Analysts
+- **Industry Trends**: Comprehensive entertainment ecosystem view
+- **Consumer Behavior**: Multi-dimensional audience analysis
+- **Performance Forecasting**: Advanced predictive modeling foundation
 
-### Phase 4: Advanced Data Processing
-1. **Column Management** - Drop unnecessary columns
-2. **Missing Value Handling** - Apply appropriate imputation techniques
-3. **Data Type Conversion**:
-   - Convert percentage values to float
-   - Convert currency values to float
-   - Standardize numeric formats
-4. **Final Validation** - Ensure data quality for analytics
+## 📊 Dashboard Highlights
+
+- **Interactive Movie Selection**: Dynamic filtering across all data sources
+- **Multi-Platform Comparison**: Side-by-side performance analysis
+- **Geographic Heat Maps**: Regional interest visualization
+- **Temporal Trend Lines**: Search pattern evolution tracking
+- **Genre Performance Matrix**: Cross-platform genre analysis
+
+## 🔮 Future Enhancements
+
+- **Real-time Data Integration**: Live streaming platform APIs
+- **Social Media Sentiment**: Twitter/Reddit sentiment analysis integration
+- **Predictive Modeling**: ML models for performance forecasting
+- **International Expansion**: Additional streaming platforms and regions
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request or open an Issue for discussion.
+
+## 📞 Contact
+
+For questions or collaboration opportunities, feel free to reach out!
+
+---
+
+*Built with ❤️ for the entertainment analytics community*
 
 ## 🚀 Setup Instructions
 
