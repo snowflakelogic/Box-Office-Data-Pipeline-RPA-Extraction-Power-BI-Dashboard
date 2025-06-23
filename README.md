@@ -212,11 +212,11 @@ StreamingAnalytics_Dashboard/
 Contributions are welcome! Please feel free to submit a Pull Request or open an Issue for discussion.
 
 ## 📞 Contact
-
 For questions or collaboration opportunities, feel free to reach out!
 
----
+LinkedIn: [snowflakelogic](https://www.linkedin.com/in/nikshita-c-75370a292/)
 
+---
 *Built with ❤️ for the entertainment analytics community*
 
 ## 🚀 Setup Instructions
