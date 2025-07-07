@@ -206,19 +206,6 @@ StreamingAnalytics_Dashboard/
 - **Predictive Modeling**: ML models for performance forecasting
 - **International Expansion**: Additional streaming platforms and regions
 
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request or open an Issue for discussion.
-
-## 📞 Contact
-For questions or collaboration opportunities, feel free to reach out!
-
-LinkedIn: [snowflakelogic](https://www.linkedin.com/in/nikshita-c-75370a292/)
-
----
-*Built with ❤️ for the entertainment analytics community*
-
 ## 🚀 Setup Instructions
 
 ### 1. Environment Setup
@@ -328,6 +315,14 @@ The processed dataset includes:
 Data Analytics Intern at [AIExecute](https://aiexecute.in/) | Mentored by [Dev Karprasad](https://www.linkedin.com/in/devkarprasad/)
 
 ## 🤝 Contributing
+Contributions are welcome! Please feel free to submit a Pull Request or open an Issue for discussion.
+
+## 📞 Contact
+For questions or collaboration opportunities, feel free to reach out!
+LinkedIn: [snowflakelogic](https://www.linkedin.com/in/nikshita-c-75370a292/)
+
+---
+*Built with ❤️ for the entertainment analytics community*
 
 ### Development Guidelines
 1. Fork the repository
